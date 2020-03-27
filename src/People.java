@@ -19,4 +19,9 @@ public class People {
 	public ArrayList<Person> getPeople() {
 		return personList;
 	}
+	
+	public void addPerson(String firstName, String lastName, String phoneNumber) {
+		personList.add(new Person(firstName, lastName, phoneNumber));
+		DataWriter.savePeople();
+	}
 }

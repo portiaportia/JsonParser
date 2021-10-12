@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class People {
 	private static People people = null;
-	private static ArrayList<Person> personList = new ArrayList<Person>();
+	private static ArrayList<Person> personList = new ArrayList<>();
 	
 	private People() {
 		personList = DataLoader.loadPeople();
@@ -22,6 +22,9 @@ public class People {
 	
 	public void addPerson(String firstName, String lastName, String phoneNumber) {
 		personList.add(new Person(firstName, lastName, phoneNumber));
+	}
+
+	public void logout(){
 		DataWriter.savePeople();
 	}
 }

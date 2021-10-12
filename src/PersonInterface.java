@@ -24,6 +24,7 @@ public class PersonInterface {
 		
 		System.out.println("***** Your updated list of friends *******");
 		displayPeople();
+		people.logout();
 		
 		System.out.println("\nHave a good day!");
 	}
